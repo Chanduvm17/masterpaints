@@ -1,133 +1,263 @@
-
-   
-    body{
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mastercoat Paints</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
       font-family: 'Montserrat', sans-serif;
       text-align: center;
     }
-   
-    h1,h2,h3,h4,h5,h6 {
-      font-family: 'Montserrat',sans-serif;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
     }
-    p{
-      color : gray;
+
+    p {
+      color: gray;
     }
-    .big-heading{
-      font-family: 'Montserrat',sans-serif;
-    font-size: 3rem;
+
+    .big-heading {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
       font-weight: bold;
-      line-height:1.5 ;
+      line-height: 1.5;
     }
+
     .section-heading {
       font-weight: bold;
       line-height: 1.5;
     }
-    .container-fluid {
-      padding : 7% 15%;
+    #footer
+    {
+      align-items: center;
+
     }
+
+    .container-fluid {
+      padding: 7% 15%;
+    }
+
     .navbar {
-      padding : 0 0 4.5rem;
+      padding: 0 0 4.5rem;
     }
 
     .navbar-brand {
-      font-family: "Ubuntu";
+      font-family: 'Montserrat', sans-serif;
       font-size: 2.5rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      font-weight: bold;
+      line-height: 1.5;
+      background: linear-gradient(45deg, #e0ebed, #eae8e5, #e6e2db);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 4px rgba(243, 240, 240, 0.3);
+      transition: transform 0.6s ease, text-shadow 0.3s ease;
+      display: flex;
+      align-items: center;
+      animation: glow 1.5s infinite alternate;
     }
 
-    .nav-item{
-      padding : 0 1.5rem;
+    .navbar-brand:hover {
+      transform: scale(1.1);
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
     }
+
+    .navbar-brand img {
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      font-style: italic;
+      color: #ff4c68;
+      margin-left: 10px;
+    }
+
+    .nav-item {
+      padding: 0 1.5rem;
+    }
+
     .nav-link {
       font-size: 1.2rem;
-      font-family : 'Montserrat';
+      font-family: 'Montserrat';
     }
+
     .dbutton {
-      margin : 5% 3% 5% 0;
+      margin: 5% 3% 5% 0;
     }
+
     #title {
       background-color: #ff4c68;
-      color : #fff;
+      color: #fff;
       text-align: left;
     }
+
     #title .container-fluid {
-      padding : 3% 15% 7%;
+      padding: 3% 15% 7%;
     }
+
     .title-image {
-      width : 22%;
+      width: 22%;
       transform: rotate(25deg);
-      position : absolute;
-      right : 25%
+      position: absolute;
+      right: 25%;
     }
-   
 
+    #features {
+      background-color: #fff;
+      position: relative;
+    }
+
+    .features-heading {
+      font-weight: bold;
+    }
+
+    .feature-box {
+      padding: 5%;
+    }
+
+    .icon {
+      color: #ef8172;
+      margin-bottom: 1rem;
+    }
+
+    .icon:hover {
+      color: #ff4c68;
+    }
+
+    #testimonials {
+      background-color: #ef8172;
+      color: #fff;
+    }
+
+    .testimonial-text {
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+    .testimonial-image {
+      width: 10%;
+      border-radius: 100%;
+      padding: 20px;
+    }
+
+    #press {
+      background-color: #ef8172;
+      padding-bottom: 3%;
+      align-items: flex-start;
+    }
+    .testimonial-image {
+      font-size: 4rem; /* Adjust size as needed */
+      color: #ff4c68; /* Adjust color as needed */
+      border-radius: 100%; 
+      padding: 20px;
+    }
     
-  #features {
-
-    background-color: #fff;
-    position: relative;
-
-  }
-  .features-heading {
-    font-weight: bold;
-  }
-   .feature-box {
-    padding : 5%;
-  
-   }
-   .icon{
-    color : #ef8172;
-    margin-bottom: 1rem;
-   }
-   .icon:hover{
-    color : #ff4c68;
-   }
-   #testimonials{
-   
-  
-    background-color: #ef8172;
-    color : #fff;
-   }
-   .testimonial-text {
-    font-weight : bold;
-    line-height: 1.5;
-   }
-   .testimonial-image {
-    width : 10%;
-    border-radius: 100%;
-    padding : 20px;
-   }
-   #press {
-    background-color: #ef8172;
-    padding-bottom: 3%;
-   }
-   .logo {
-    width : 15%;
-    margin : 20px 20px 50px;
-   }
-   #pricing {
-    padding : 100px;
-   }
-   .price-text {
-    font-weight : bold;
-    line-height: 1.5;
-   }
-   .pricing-col {
-    padding : 3% 2%;
-   }
-   #cta {
-     background-color: #ff4c68;
-     color : #fff;
-     font-size: 3.5rem;
-     font-weight: bold;
-     padding : 6% 0 4%;
-   }
-   .icn{
-    padding : 20px 10px;
-
-   }
-   @media(max-width : 1026px){
-    .title-image {
-      width : 60%;
-      position : static;
-      right : 25%
+    .logo {
+      width: 15%;
+      margin: 20px 20px 50px;
     }
-  }
+
+    #pricing {
+      padding: 100px;
+    }
+
+    .price-text {
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+    .pricing-col {
+      padding: 3% 2%;
+    }
+
+    #cta {
+      background-color: #ff4c68;
+      color: #fff;
+      font-size: 3.5rem;
+      font-weight: bold;
+      padding: 6% 0 4%;
+    }
+
+    .icn {
+      padding: 20px 10px;
+    }
+
+    @media (max-width: 1026px) {
+      .title-image {
+        width: 60%;
+        position: static;
+        right: 25%;
+      }
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 2px 2px 4px rgba(247, 237, 237, 0.73), 0 0 20px #e1d0d3, 0 0 30px #91ff00, 0 0 40px #e6e2db;
+      }
+      to {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 30px #ff4c68, 0 0 40px #ff8c00, 0 0 50px #e6e2db;
+      }
+    }
+
+    /* Wavy divider */
+    .wavy-divider {
+      position: relative;
+      height: 150px; /* Adjust height as needed */
+      background-color: #ff4c68; /* Adjust background color as needed */
+      margin-top: -5px;
+    }
+
+    .wavy-divider svg {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">
+      <img src="mclogoo.png" alt="Company Logo"> mastercoat Paints
+      <span class="tagline">Coloring Your World</span>
+    </a>
+  </nav>
+
+  <!-- Section with wavy divider -->
+  <div id="features" class="container-fluid">
+    <h2 class="features-heading">Features</h2>
+    <div class="feature-box">
+      <p>Feature content goes here.</p>
+    </div>
+    <div class="wavy-divider">
+      <svg viewBox="0 0 1440 320">
+        <path fill="#fff" fill-opacity="1" d="M0,224L60,197.3C120,171,240,117,360,112C480,107,600,149,720,181.3C840,213,960,235,1080,208C1200,181,1320,107,1380,69.3L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+      </svg>
+    </div>
+  </div>
+
+  <div id="testimonials" class="container-fluid">
+    <h2 class="testimonial-text">Testimonials</h2>
+    <div class="testimonial-box">
+      <i class="fas fa-user-circle testimonial-image"></i>
+      <p>Customer feedback goes here.</p>
+    </div>
+    <div class="wavy-divider">
+      <svg viewBox="0 0 1440 320">
+        <path fill="#fff" fill-opacity="1" d="M0,224L60,197.3C120,171,240,117,360,112C480,107,600,149,720,181.3C840,213,960,235,1080,208C1200,181,1320,107,1380,69.3L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>
