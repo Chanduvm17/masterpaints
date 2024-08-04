@@ -6,9 +6,140 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TinDog - Signup</title>
 
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-5d1nXG2mOUu9u5Ew/F1jOMxGBh9FJYjzsdQdU3RIJrCTjN2FBiNcR8Yq8u2pLhIRkl9QKJomA8lZ8PZiNf+QsA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .navbar {
+      margin-bottom: 2rem;
+    }
+
+    .navbar-brand {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+
+    .navbar-nav .nav-link {
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ff4c68;
+    }
+
+    #signup {
+      background: #fff;
+      padding: 3rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 2rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 2rem;
+    }
+
+    .form-label {
+      font-weight: bold;
+    }
+
+    .form-control {
+      border-radius: 0.25rem;
+      border: 1px solid #ced4da;
+      padding-left: 2.5rem;
+      background: #f9f9f9;
+    }
+
+    .form-control:focus {
+      border-color: #ff4c68;
+      box-shadow: 0 0 0 0.2rem rgba(255, 76, 104, 0.25);
+    }
+
+    .form-control.icon-input {
+      background: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/user.svg') no-repeat 10px center;
+      background-size: 20px;
+      padding-left: 2.5rem;
+    }
+
+    .form-control.icon-input.email {
+      background: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/envelope.svg') no-repeat 10px center;
+      background-size: 20px;
+    }
+
+    .form-control.icon-input.password {
+      background: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/lock.svg') no-repeat 10px center;
+      background-size: 20px;
+    }
+
+    .form-check-input:checked {
+      background-color: #ff4c68;
+      border-color: #ff4c68;
+    }
+
+    .btn-dark {
+      background-color: #ff4c68;
+      border: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-dark:hover {
+      background-color: #e03a50;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 1rem;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    footer a {
+      color: #ff4c68;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .go-back {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .go-back a {
+      color: #ff4c68;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .go-back a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
@@ -40,24 +171,24 @@
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="firstName" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="firstName" required>
+            <input type="text" class="form-control icon-input" id="firstName" required>
           </div>
           <div class="col-md-6 mb-3">
             <label for="lastName" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="lastName" required>
+            <input type="text" class="form-control icon-input" id="lastName" required>
           </div>
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email Address</label>
-          <input type="email" class="form-control" id="email" required>
+          <input type="email" class="form-control icon-input email" id="email" required>
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" id="password" required>
+          <input type="password" class="form-control icon-input password" id="password" required>
         </div>
         <div class="mb-3">
           <label for="confirmPassword" class="form-label">Confirm Password</label>
-          <input type="password" class="form-control" id="confirmPassword" required>
+          <input type="password" class="form-control icon-input password" id="confirmPassword" required>
         </div>
         <div class="mb-3 form-check">
           <input type="checkbox" class="form-check-input" id="terms" required>
@@ -65,11 +196,15 @@
         </div>
         <button type="submit" class="btn btn-dark w-100">Sign Up</button>
       </form>
+
+      <div class="go-back">
+        <p><a href="index.html">Go Back to Home Page</a></p>
+      </div>
     </div>
   </section>
 
-  <footer class="bg-dark text-white text-center py-3 mt-4">
-    <p>© Copyright TinDog</p>
+  <footer>
+    <p>© Copyright TinDog | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
   </footer>
 
 </body>
