@@ -1,126 +1,254 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>mastercoat Paints</title>
+  <meta charset="UTF-8">
+  <title>Mastercoat Paints</title>
   
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
   <link rel="stylesheet" href="https://kit.fontawesome.com/65c4b38f88.css" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/65c4b38f88.js" crossorigin="anonymous"></script>
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="mclogoo.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="mclogoo.png">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="styles.css">
-</head>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="mclogoo.png">
+  
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+    }
+    p {
+      color: gray;
+    }
+    .big-heading {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      font-weight: bold;
+      line-height: 1.5;
+    }
+    .section-heading {
+      font-weight: bold;
+      line-height: 1.5;
+    }
+    .navbar-brand {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      background: linear-gradient(45deg, #e0ebed, #eae8e5, #e6e2db);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 4px rgba(243, 240, 240, 0.3);
+      transition: transform 0.6s ease, text-shadow 0.3s ease;
+      display: flex;
+      align-items: center;
+      animation: glow 1.5s infinite alternate;
+    }
+    .navbar-brand:hover {
+      transform: scale(1.1);
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    .navbar-brand img {
+      height: 50px;
+      margin-right: 15px;
+    }
+    .nav-item {
+      padding: 0 1.5rem;
+    }
+    .nav-link {
+      font-size: 1.2rem;
+    }
+    .dbutton {
+      margin: 5% 3% 5% 0;
+    }
+    #title {
+      background-color: #ff4c68;
+      color: #fff;
+      text-align: left;
+    }
+    #title .container-fluid {
+      padding: 3% 15% 7%;
+    }
+    .title-image {
+      width: 100%;
+      max-width: 400px;
+      transform: rotate(25deg);
+      position: absolute;
+      right: 25%;
+    }
+    #features {
+      background-color: #fff;
+      padding: 5% 0;
+    }
+    .features-heading {
+      font-weight: bold;
+    }
+    .feature-box {
+      padding: 5%;
+    }
+    .icon {
+      color: #ef8172;
+      margin-bottom: 1rem;
+    }
+    .icon:hover {
+      color: #ff4c68;
+    }
+    #testimonials {
+      background-color: #ef8172;
+      color: #fff;
+      padding: 5% 0;
+    }
+    .testimonial-text {
+      font-weight: bold;
+      line-height: 1.5;
+    }
+    .testimonial-image {
+      width: 100px;
+      border-radius: 100%;
+      padding: 20px;
+    }
+    #pricing {
+      padding: 5% 0;
+    }
+    .price-text {
+      font-weight: bold;
+      line-height: 1.5;
+    }
+    .pricing-col {
+      padding: 3% 2%;
+    }
+    #cta {
+      background-color: #ff4c68;
+      color: #fff;
+      font-size: 3.5rem;
+      font-weight: bold;
+      padding: 6% 0 4%;
+    }
+    #footer {
+      padding: 3% 0;
+      background-color: #333;
+      color: #fff;
+    }
+    .icn {
+      padding: 20px 10px;
+    }
+    @media (max-width: 1026px) {
+      .title-image {
+        width: 60%;
+        position: static;
+        right: 25%;
+      }
+    }
+    @keyframes glow {
+      from {
+        text-shadow: 2px 2px 4px rgba(247, 237, 237, 0.73), 0 0 20px #e1d0d3, 0 0 30px #91ff00, 0 0 40px #e6e2db;
+      }
+      to {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 30px #ff4c68, 0 0 40px #ff8c00, 0 0 50px #e6e2db;
+      }
+    }
+  </style>
+</head>
 <body>
 
-  <section id="title">
-    <!-- Nav Bar -->
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-md navbar-dark"> 
-        <a class="navbar-brand" href="index.html">
-          <img src="mclogoo.png" alt="MasterCoat Paints Logo" style="height: 30px; margin-right: 10px;">
-          masterCoat paints
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#footer">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#pricing">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#cta">Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="signup.html">Sign Up</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark"> 
+    <a class="navbar-brand" href="index.html">
+      <img src="mclogoo.png" alt="MasterCoat Paints Logo">
+      masterCoat paints
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#footer">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#pricing">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#cta">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#signup">Sign Up</a>
+        </li>
+      </ul>
     </div>
+  </nav>
 
-    <!-- Title -->
-    <div class="row">
+  <!-- Title -->
+  <section id="title" class="container-fluid">
+    <div class="row align-items-center">
       <div class="col-lg-6">
         <h1 class="big-heading">Transform Your Space with Mastercoat Paints.</h1>
         <button type="button" class="btn btn-dark btn-lg dbutton"><i class="fa-solid fa-paint-roller"></i> Get Started</button>
         <button type="button" class="btn btn-outline-light btn-lg dbutton"><i class="fa-solid fa-info-circle"></i> Learn More</button>
       </div>
       <div class="col-lg-6">
-        <img class="title-image" src="imageweb.avif" alt="Mastercoat-paints">
+        <img class="title-image img-fluid" src="imageweb.avif" alt="Mastercoat-paints">
       </div>
     </div>
   </section>
 
   <!-- Features -->
-  <section id="features">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="feature-box col-lg-4">
-          <i class="icon fa-solid fa-palette fa-4x"></i>
-          <h3 class="features-heading">Variety of Colors</h3>
-          <p>Choose from a wide range of colors and finishes.</p>
-        </div>
-        <div class="feature-box col-lg-4">
-          <i class="icon fa-solid fa-brush fa-4x"></i>
-          <h3 class="features-heading">High Quality</h3>
-          <p>Top-notch paints for lasting beauty and protection.</p>
-        </div>
-        <div class="feature-box col-lg-4" style="padding : 5% 0;">
-          <i class="icon fa-solid fa-thumbs-up fa-4x"></i>
-          <h3 class="features-heading">Customer Satisfaction</h3>
-          <p>Guaranteed satisfaction with every purchase.</p>
-        </div>
+  <section id="features" class="container-fluid">
+    <div class="row">
+      <div class="feature-box col-lg-4">
+        <i class="icon fa-solid fa-palette fa-4x"></i>
+        <h3 class="features-heading">Variety of Colors</h3>
+        <p>Choose from a wide range of colors and finishes.</p>
+      </div>
+      <div class="feature-box col-lg-4">
+        <i class="icon fa-solid fa-brush fa-4x"></i>
+        <h3 class="features-heading">High Quality</h3>
+        <p>Top-notch paints for lasting beauty and protection.</p>
+      </div>
+      <div class="feature-box col-lg-4">
+        <i class="icon fa-solid fa-thumbs-up fa-4x"></i>
+        <h3 class="features-heading">Customer Satisfaction</h3>
+        <p>Guaranteed satisfaction with every purchase.</p>
       </div>
     </div>
   </section>
 
   <!-- Testimonials -->
   <section id="testimonials">
-    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+    <div id="testimonial-carousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active container-fluid">
-          <h2 class="testimonial-text">Mastercoat Paints transformed my home with vibrant colors. I love the new look!</h2>
-          <img class="testimonial-image" src="alex.png" alt="customer-profile">
-          <em>Alex, New York</em>
-          <section id="press">
-            <img class="logo" src="logo1.jpeg" alt="logo1">
-            
-            
-          </section>
-        
+        <div class="carousel-item active">
+          <h2 class="testimonial-text">"Mastercoat Paints transformed my home! The colors are vibrant and the finish is perfect."</h2>
+          <img class="testimonial-image" src="testimonial1.jpg" alt="customer-photo">
+          <em>John Doe, California</em>
         </div>
-        <div class="carousel-item container-fluid">
-          <h2 class="testimonial-text">The quality of the paints is outstanding. My house looks brand new.</h2>
-          <img class="testimonial-image" src="mark.png" alt="customer-profile">
-          <em>--India</em>
-          <section id="press">
-            <img class="logo" src="logo5.jpeg" alt="logo1">
-            
-            
-          </section>
+        <div class="carousel-item">
+          <h2 class="testimonial-text">"I've never been happier with a paint brand. Exceptional quality and great customer service."</h2>
+          <img class="testimonial-image" src="testimonial2.jpg" alt="customer-photo">
+          <em>Jane Smith, New York</em>
+        </div>
+        <div class="carousel-item">
+          <h2 class="testimonial-text">"Highly recommend Mastercoat Paints for any painting project. Their products are top-notch."</h2>
+          <img class="testimonial-image" src="testimonial3.jpg" alt="customer-photo">
+          <em>Mary Johnson, Texas</em>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
@@ -128,35 +256,33 @@
   </section>
 
   <!-- Pricing -->
-  <section id="pricing">
-    <h2 class="section-heading">A Plan for Every Project's Needs</h2>
-    <p>Affordable and flexible pricing plans for all your painting needs.</p>
+  <section id="pricing" class="container-fluid">
     <div class="row">
-      <div class="pricing-col col-lg-4 col-md-6">
+      <div class="pricing-col col-lg-4">
         <div class="card">
           <div class="card-header">
             <h3>Basic</h3>
           </div>
           <div class="card-body">
-            <h2 class="price-text">Free</h2>
-            <p>Color Consultation</p>
-            <p>Sample Paints</p>
-            <p>Basic App Usage</p>
-            <a href="signup.html" class="w-100 btn btn-lg btn-outline-dark">Sign Up</a>
+            <h2 class="price-text">$19.99</h2>
+            <p>1 Gallon of Paint</p>
+            <p>Standard Colors</p>
+            <p>1 Year Warranty</p>
+            <button class="btn btn-outline-dark btn-lg btn-block">Buy Now</button>
           </div>
         </div>
       </div>
-      <div class="pricing-col col-lg-4 col-md-6">
+      <div class="pricing-col col-lg-4">
         <div class="card">
           <div class="card-header">
             <h3>Standard</h3>
           </div>
           <div class="card-body">
-            <h2 class="price-text">$49 / mo</h2>
-            <p>Advanced Color Consultation</p>
-            <p>Unlimited Sample Paints</p>
-            <p>Priority App Support</p>
-            <a href="signup.html" class="w-100 btn btn-lg btn-dark">Sign Up</a>
+            <h2 class="price-text">$49.99</h2>
+            <p>5 Gallons of Paint</p>
+            <p>Premium Colors</p>
+            <p>5 Year Warranty</p>
+            <button class="btn btn-dark btn-lg btn-block">Buy Now</button>
           </div>
         </div>
       </div>
@@ -166,11 +292,11 @@
             <h3>Premium</h3>
           </div>
           <div class="card-body">
-            <h2 class="price-text">$99 / mo</h2>
-            <p>Full Color Consultation</p>
-            <p>Unlimited Sample Paints</p>
-            <p>Dedicated Support</p>
-            <a href="signup.html" class="w-100 btn btn-lg btn-dark">Sign Up</a>
+            <h2 class="price-text">$99.99</h2>
+            <p>10 Gallons of Paint</p>
+            <p>All Colors</p>
+            <p>Lifetime Warranty</p>
+            <button class="btn btn-dark btn-lg btn-block">Buy Now</button>
           </div>
         </div>
       </div>
@@ -179,22 +305,39 @@
 
   <!-- Call to Action -->
   <section id="cta">
-    <h3 class="big-heading">Bring Color to Your World with  Paints.</h3>
-    <button type="button" class="btn btn-dark btn-lg dbutton"><i class="fa-solid fa-paint-roller"></i> Get Started</button>
-    <button type="button" class="btn btn-outline-light btn-lg dbutton"><i class="fa-solid fa-info-circle"></i> Learn More</button>
+    <h3>Transform Your Space with Mastercoat Paints</h3>
+    <button class="btn btn-lg btn-dark dbutton">Shop Now</button>
+    <button class="btn btn-lg btn-outline-light dbutton">Learn More</button>
+  </section>
+
+  <!-- Sign-Up Form -->
+  <section id="signup" class="container-fluid my-5">
+    <h2 class="section-heading">Sign Up for Exclusive Offers</h2>
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <button type="submit" class="btn btn-dark">Sign Up</button>
+    </form>
   </section>
 
   <!-- Footer -->
-  <footer id="footer">
-    <div class="container-fluid">
-      <i class="icn fa-brands fa-twitter"></i>
-      <i class="icn fa-brands fa-facebook"></i>
-      <i class="icn fa-brands fa-instagram"></i>
-      <i class="icn fa-solid fa-envelope"></i>
-      <p>© Copyright MastercoatPaints</p>
-    </div>
+  <footer id="footer" class="container-fluid text-center">
+    <i class="fa-brands fa-twitter icn"></i>
+    <i class="fa-brands fa-facebook-f icn"></i>
+    <i class="fa-brands fa-instagram icn"></i>
+    <i class="fa-solid fa-envelope icn"></i>
+    <p>© 2023 Mastercoat Paints</p>
   </footer>
 
-</body>
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqjHFHE0pksIPe56EFyjYj6j52nD2VhPzC1srooub8iMlfFXHI0x0f7LZ3eg/" crossorigin="anonymous"></script>
 
+</body>
 </html>
+
